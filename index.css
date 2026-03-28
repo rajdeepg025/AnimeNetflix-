@@ -95,10 +95,93 @@ p{
 
 .home,.search,.music,.manga{
     width: 30px;
+    padding: 5px;
+    transition: background-color 0.25s,border-radius 0.25s;
+}
+
+.home:hover,.search:hover,.music:hover,.manga:hover,.setting:hover{
+    background-color: gray;
+    border-radius: 5px;
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
 }
 
 .setting{
     width: 24px;
     padding-top: 10px;
     margin-bottom: 0;
+    padding: 5px;
+}
+
+.banner{
+    padding-bottom: 10px;
+}
+
+.slide{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+    border-radius: 10px;
+    transition: box-show 0.25s,border 0.25s,opacity 0.30s,heigth 0.25s;
+}
+
+.slide:hover{
+    border: 1px solid white;
+    opacity: 0.7;
+    height: 399px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+.animes{
+    width: 220px;
+    height: 435px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.most-pop-sec{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.anime-img{
+    width: 220px;
+    height: 320px;
+}
+
+.page{
+    padding-left: 48px;
+    padding-top: 54px;
+}
+
+p{
+    font-family: arial;
+    color: white;
+    margin: 5px 5px 5px 5px;
+}
+
+.anime-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.anime-dil{
+    color: gray;
+}
+
+.most-pop{
+    font-weight: bold;
+    font-size: 25px;
+    border-bottom: 1px solid  rgb(168, 167, 167);
+}
+
+.anime-sec1{
+    display: flex;
+    flex-direction: column;
 }
