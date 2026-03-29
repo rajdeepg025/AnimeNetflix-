@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnimeNetflex-Home</title>
     <link rel="stylesheet" href="index.css">
+    
 </head>
-<body>
+<body class="light-mode">
     <div class="top-header">
       <div class="header">
         <div class="right-header">
@@ -17,7 +18,7 @@
         <div class="center-header"></div>
 
         <div class="left-header">
-            <div ><img src="anime-img/icons8-settings-50.png" class="setting"></div>
+            <div onclick="toggleMode()"><img src="anime-img/icons8-settings-50.png" class="setting"></div>
         </div>
     </div>  
     </div>
@@ -249,28 +250,6 @@
         </div>
         
     </div>
-    
-    <script>
-       const player = document.getElementById("player");
-       let currentSong = "";
-
-function playMusic(src, btn) {
-  // if same song
-  if (currentSong === src) {
-    if (player.paused) {
-      player.play();
-      btn.innerText = "⏸";
-    } else {
-      player.pause();
-      btn.innerText = "▶";
-    }
-  } else {
-    currentSong = src;
-    player.src = src;
-    player.play();
-    btn.innerText = "⏸";
-  }
-}
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>

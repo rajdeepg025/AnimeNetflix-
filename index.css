@@ -1,9 +1,23 @@
-body{
-    background-color: rgb(12, 12, 12);
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --nav-bg: #adadad;
+  
 }
 
-p{
-    color: white;
+.light-mode {
+  --bg-color: #0c0c0c;
+  --text-color: white;
+  --nav-bg: #000000;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
 }
 
 .name{
@@ -64,7 +78,7 @@ p{
     top: 0;
     right: 0;
     left: 0;
-    background-color: black;
+    background-color: var(--nav-bg);
     z-index: 5;
 }
 
@@ -73,7 +87,7 @@ p{
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: black;
+    background-color: var(--nav-bg);
     z-index: 1;
 }
 
@@ -114,6 +128,7 @@ p{
     padding-top: 10px;
     margin-bottom: 0;
     padding: 5px;
+    
 }
 
 .logo{
@@ -183,7 +198,7 @@ p{
 
 p{
     font-family: arial;
-    color: white;
+    color: var(--text-color);
     margin: 5px 5px 5px 5px;
 }
 
@@ -253,4 +268,17 @@ p{
 .anime-sec1{
     display: flex;
     flex-direction: column;
+}
+
+.setting-menu {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.setting-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
