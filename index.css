@@ -147,9 +147,18 @@ p{
     height: 435px;
     padding-left: 5px;
     padding-top: 5px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    word-break: break-all;
+}
+
+.anime-music{
+    width: 220px;
+    height: 300px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.anime-music-img{
+    width: 220px;
+    height: 220px;
 }
 
 .most-pop-sec{
@@ -160,7 +169,6 @@ p{
     overflow-y: hidden;
     white-space: nowrap;
     scrollbar-width: none;
-    
 }
 
 .anime-img{
