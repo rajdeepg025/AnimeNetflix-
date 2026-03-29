@@ -164,7 +164,7 @@ p{
 .most-pop-sec{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 15px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -190,7 +190,52 @@ p{
 .anime-title{
     font-weight: bold;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 16px;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* overlay hidden */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+/* show on hover */
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* play button */
+.overlay button {
+  font-size: 30px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  cursor: pointer;
 }
 
 .anime-dil{

@@ -148,48 +148,129 @@
         <div ><p class="most-pop">Music</p></div>
         <div class="most-pop-sec">
             <div class="anime-music">
-            <div><img src="anime music/CD _ Creepy Nuts LEGION Standard Edition.jpeg" class="anime-music-img"></div>
+           <div class="card">
+                <img src="anime music/CD _ Creepy Nuts LEGION Standard Edition.jpeg" class="anime-music-img">
+
+                <div class="overlay">
+                <button onclick="playMusic('anime music/bling-bang-bang-born.mp3', this)">▶</button>
+                </div>
+            </div>
             <div><p class="anime-title">Bling-Bang-Bang-Born</p></div>
             <div><p class="anime-dil">Creepy Nuts</p></div>
         </div>
+        <audio id="player"></audio>
             <div class="anime-music">
-            <div><img src="anime music/Kamado Tanjirou no Uta (From _Demon Slayer_ Kimetsu no Yaiba_).jpeg" class="anime-music-img"></div>
+            <div class="card">
+                <img src="anime music/Kamado Tanjirou no Uta (From _Demon Slayer_ Kimetsu no Yaiba_).jpeg" class="anime-music-img">
+
+                <div class="overlay">
+                <button onclick="playMusic('anime music/Kamado-Tanjiro-no-Uta.mp3', this)">▶</button>
+                </div>
+            </div>
             <div><p class="anime-title">Kamado Tanjirou no Uta</p></div>
             <div><p class="anime-dil">LisA</p></div>
         </div>
+        <audio id="player"></audio>
+             <div class="anime-music">
+
+            <div class="card">
+                <img src="anime music/オトノケ - Otonoke.jpeg" class="anime-music-img">
+
+                <div class="overlay">
+                <button onclick="playMusic('anime music/dandadan-otonoke.mp3', this)">▶</button>
+                </div>
+            </div>
+
+            <p class="anime-title">Otonoke</p>
+            <p class="anime-dil">Creepy Nuts</p>
+
+            </div>
+            <audio id="player"></audio>
             <div class="anime-music">
-            <div><img src="anime music/オトノケ - Otonoke.jpeg" class="anime-music-img"></div>
-            <div><p class="anime-title">Otonoke</p></div>
-            <div><p class="anime-dil">Creepy Nuts</p></div>
-        </div>
+
+            <div class="card">
+                <img src="anime music/iris.jpeg" class="anime-music-img">
+
+                <div class="overlay">
+                <button onclick="playMusic('anime music/iris out music.mp3', this)">▶</button>
+                </div>
+            </div>
+
+            <p class="anime-title">IRIS OUT</p>
+            <p class="anime-dil">Kenshi Yonezu</p>
+
+            </div>
+            <audio id="player"></audio>
             <div class="anime-music">
-            <div><img src="anime music/iris.jpeg" class="anime-music-img"></div>
-            <div><p class="anime-title">IRIS OUT</p></div>
-            <div><p class="anime-dil">Kenshi Yonezu</p></div>
-        </div>
-            <div class="anime-music">
-            <div><img src="anime music/Number-One-Bankaijpg.jpg" class="anime-music-img"></div>
+            <div class="card">
+                <img src="anime music/Number-One-Bankaijpg.jpg" class="anime-music-img">
+
+                <div class="overlay">
+                <button onclick="playMusic('anime music/Number-One-Bankai.mp3', this)">▶</button>
+                </div>
+            </div>
             <div><p class="anime-title">Number one-Bankai</p></div>
-            <div><p class="anime-dil">Shiro SAGISU,Hazel Fernandes </p></div>
+            <div><p class="anime-dil">Shiro SAGISU </p></div>
         </div>
             <div class="anime-music">
-            <div><img src="anime music/Nyanpasu.jpeg" class="anime-music-img"></div>
+            <div class="card">
+                <img src="anime music/Nyanpasu.jpeg" class="anime-music-img">
+
+                <div class="overlay">
+                <button onclick="playMusic('anime music/Nyanpasu-Yabure-Kabure.mp3', this)">▶</button>
+                </div>
+            </div>
             <div><p class="anime-title">Nyanpasu Yabure Kabure</p></div>
             <div><p class="anime-dil">Kotori Koiwai</p></div>
         </div>
             <div class="anime-music">
-            <div><img src="anime music/wah-wah-anta.jpeg" class="anime-music-img"></div>
+            <div class="card">
+                <img src="anime music/wah-wah-anta.jpeg" class="anime-music-img">
+
+                <div class="overlay">
+                <button onclick="playMusic('anime music/SpyxFamily-Waku-Waku-Song.mp3', this)">▶</button>
+                </div>
+            </div>
             <div><p class="anime-title">Waku Waku(Anya Song)</p></div>
             <div><p class="anime-dil">Anya</p></div>
         </div>
             <div class="anime-music">
-            <div><img src="anime music/just-a-boy.jpeg" class="anime-music-img"></div>
+            <div class="card">
+                <img src="anime music/just-a-boy.jpeg" class="anime-music-img">
+
+                <div class="overlay">
+                <button onclick="playMusic('anime music/DrINsaNE-JUST-A-BOY.mp3', this)">▶</button>
+                </div>
+            </div>
             <div><p class="anime-title">Just A Boy</p></div>
             <div><p class="anime-dil">DrINsaNE</p></div>
         </div>
+        <audio id="player"></audio>
         </div>
         
     </div>
+    
+    <script>
+       const player = document.getElementById("player");
+       let currentSong = "";
 
+function playMusic(src, btn) {
+  // if same song
+  if (currentSong === src) {
+    if (player.paused) {
+      player.play();
+      btn.innerText = "⏸";
+    } else {
+      player.pause();
+      btn.innerText = "▶";
+    }
+  } else {
+    currentSong = src;
+    player.src = src;
+    player.play();
+    btn.innerText = "⏸";
+  }
+}
+    </script>
 </body>
 </html>
