@@ -1,6 +1,8 @@
 function toggleManu() {
     document.getElementById('set-manu').classList.toggle('active');
-}// APPLY SAVED MODE ON LOAD
+}  
+
+// APPLY SAVED MODE ON LOAD
 const savedMode = localStorage.getItem("mode");
 
 if (savedMode === "light") {

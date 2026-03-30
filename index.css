@@ -63,6 +63,8 @@ p {
     justify-content: space-between;
     height: 40px;
     padding: 9px;
+    background-color: var(--nav-bg);
+    opacity: 87%;
 }
 
 .side-nav{
@@ -78,7 +80,7 @@ p {
     top: 0;
     right: 0;
     left: 0;
-    background-color: var(--nav-bg);
+    
     z-index: 5;
 }
 
@@ -270,15 +272,3 @@ p{
     flex-direction: column;
 }
 
-.setting-menu {
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition: 0.3s;
-}
-
-.setting-menu.active {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
