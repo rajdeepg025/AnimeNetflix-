@@ -290,6 +290,14 @@ p{
     z-index: 1;
 }
 
+#dil-poster-top{
+    object-position: 30% 29%;
+}
+
+#dil-poster-bottom{
+    object-position: 30% 80%;
+}
+
 .dil-info{
     background-color: rgb(8, 8, 8);
     z-index: 999;
@@ -330,10 +338,20 @@ p{
 .div-ep-number{
     border-bottom: 1px solid gray;
     position: relative;
+    transition: opacity 0.25s,background-color 0.25s, border-radius 0.25s;
+    text-decoration: none;
 }
 
 .div-ep-number-last{
     position: relative;
+    transition: opacity 0.25s,background-color 0.25s, border-radius 0.25s;
+    text-decoration: none;
+}
+
+.div-ep-number-last:hover{
+    opacity: 0.6;
+    background-color: rgb(24, 24, 24);
+    border-radius: 16px;
 }
 
 .div-all-ep{
@@ -347,6 +365,7 @@ p{
 .div-ep-number:hover{
     opacity: 0.6;
     background-color: rgb(24, 24, 24);
+    border-radius: 16px;
 }
 
 .dil-ep{
