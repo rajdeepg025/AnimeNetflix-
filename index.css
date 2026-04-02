@@ -406,3 +406,20 @@ p{
 .button-watch:hover{
     background-color: rgb(204, 1, 1);
 }
+
+#button-watch-manga{
+    background-color: rgb(165, 0, 165);
+}
+#button-watch-manga:hover{
+    background-color: rgb(134, 0, 134);
+}
+#dil-poster-manga{
+    height: 600px;
+}
+#dil-info-manga{
+    margin-top: -30px;
+}
+#dil-poster-manga-top{
+    height: 600px;
+    object-position: 30% 10%;
+}
