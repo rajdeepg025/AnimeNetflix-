@@ -6,13 +6,12 @@ app = Flask(__name__)
 
 # Railway MySQL connection using environment variables
 db = mysql.connector.connect(
-    host="mysql.railway.internal",
+    host="roundhouse.proxy.rlwy.net",
     user="root",
     password="wLnxuZvWEwSWEnfASOYTyqNGlROolOCP",
     database="railway",
-    port=3306
+    port=34681
 )
-
 cursor = db.cursor(dictionary=True)
 
 
