@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeNetflex-Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    
+</head>
+<body class="light-mode">
+    <div class="top-header">
+      <div class="header">
+        <div class="right-header">
+            <div><img src="{{ url_for('static', filename='images/banners-img/ChatGPT Image Mar 29, 2026, 02_19_56 AM.png')}}" class="logo"></div>
+            <div><p class="name">AnimeNetflex</p></div>
+        </div>
+
+        <div class="center-header"></div>
+
+        <div class="left-header">
+            <div onclick="toggleMode()"><img src="{{ url_for('static', filename='images/banners-img/icons8-settings-50.png')}}" class="setting"></div>
+        </div>
+    </div>  
+    </div>
+
+    <div class="top-side-nav">
+        <div class="side-nav">
+            <a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='images/banners-img/home.png') }}" class="home"></a>
+            <a href="{{url_for('search')}}"><img src="{{ url_for('static', filename='images/banners-img/search_3053866.png ') }}" class="search"></a>
+            <a href="{{url_for('music')}}"><img src="{{ url_for('static', filename='images/banners-img/icons8-sound-wave-50.png') }}" class="music"></a>
+            <a href="{{url_for('reading')}}"><img src="{{ url_for('static', filename='images/banners-img/school_14042400.png') }}" class="manga"></a> 
+        </div>
+    </div>
+    
+    <div class="page">
+        <div class="banner">
+        <a href="anime-manga-page/dress-up-darling-s1.html"><img src="{{ url_for('static', filename='images/banners-img/download (2).jpeg')}}" class="slide active"></a>
+    </div>
+    
+    <div class="anime-sec1">
+        <div ><p class="most-pop">Animes</p></div>
+        
+        <div class="most-pop-sec">
+            <div class="most-pop-sec">
+
+{% for anime in anime_list %}
+
+<div class="animes">
+
+<img 
+    src="{{ url_for('static', filename='images/anime-img/' + anime.image) }}" 
+    class="anime-img"><div> 
+<p class="anime-title">
+{{ anime.title }}
+</p>
+</div>
+
+<div>
+    <p class="anime-dil">{{ anime.season }} {{anime.latest_episode}}</p>
+    <p class="anime-dil"> {{ anime.rating }} ⭐</p>
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+        </div>
+    </div>
+
+        <div class="anime-sec1">
+        <div ><p class="most-pop">Manhwa and Manga</p></div>
+        <div class="most-pop-sec">
+            {% for book in book_list %}
+
+        <div class="animes">
+
+        <img 
+            src="{{ url_for('static', filename='images/manga-img/' + book.image) }}" 
+            class="anime-img">
+        <div> 
+         <p class="anime-title">{{ book.title }}</p>
+        </div>
+
+        <div>
+            <p class="anime-dil"> {{ book.rating }} ⭐
+
+            {% if book.status == "Ongoing" %}
+             Ongoing 🟢
+
+            {% elif book.status == "Completed" %}
+             Completed 🟠
+
+            {% endif %}  </p>
+        </div>
+
+        </div>
+
+        {% endfor %}
+    </div>
+
+    <div class="anime-sec1">
+        <div ><p class="most-pop">Music</p></div>
+        <div class="most-pop-sec">
+            {% for music in music_list %}
+            <div class="anime-music">
+           <div class="card">
+                <img src="{{ url_for('static',filename='images/music-img/'+music.image)}}" class="anime-music-img">
+
+                <div class="overlay">
+                <button onclick="playMusic('{{ url_for('static', filename='images/music-img/' + music.song) }}', this)">▶</button>
+                </div>
+            </div>
+            <div><p class="anime-title">{{music.title}}</p></div>
+            <div><p class="anime-dil">{{music.singer}}</p></div>
+        </div>
+        <audio id="player"></audio>
+           {% endfor %}
+        </div>
+        
+    </div>
+    <script src="{{ url_for('static', filename='js/index.js')}}"></script>
+</body>
+</html>
