@@ -1,15 +1,16 @@
 from flask import Flask, render_template
 import mysql.connector
-from flask import request
+import os
 
 app = Flask(__name__)
 
-# MySQL Connection
+# Railway MySQL connection using environment variables
 db = mysql.connector.connect(
-    host="localhost",
+    host="mysql.railway.internal",
     user="root",
-    password="12345",
-    database="animeNetflix"
+    password="wLnxuZvWEwSWEnfASOYTyqNGlROolOCP",
+    database="railway",
+    port=3306
 )
 
 cursor = db.cursor(dictionary=True)
@@ -18,11 +19,11 @@ cursor = db.cursor(dictionary=True)
 @app.route("/")
 def home():
 
-    # Fetch Anime
+    cursor = db.cursor(dictionary=True)
+
     cursor.execute("SELECT * FROM anime")
     anime_result = cursor.fetchall()
 
-    # Fetch Books (Manga/Manhwa)
     cursor.execute("SELECT * FROM book")
     book_result = cursor.fetchall()
 
@@ -47,25 +48,10 @@ def reading():
     return render_template("reading.html")
 
 
-@app.route("/search", methods=["GET"])
+@app.route("/search")
 def search():
-
-    query = request.args.get("q")
-
-    results = []
-
-    if query:
-        cursor.execute(
-            "SELECT * FROM anime WHERE title LIKE %s",
-            ("%" + query + "%",)
-        )
-        results = cursor.fetchall()
-
-    return render_template(
-        "search.html",
-        results=results
-    )
+    return render_template("search.html")
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(debug=True)
