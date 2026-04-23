@@ -423,3 +423,92 @@ p{
     height: 600px;
     object-position: 30% 10%;
 }
+
+/* 📱 MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+
+    /* Move side nav to bottom */
+    .top-side-nav {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+    }
+
+    .overlay{
+        width: 70%;
+    }
+
+    .side-nav {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        padding-top: 0;
+        gap: 0;
+        height: 60px;
+    }
+
+    /* Add space so bottom nav doesn't cover content */
+    body {
+        padding-bottom: 70px;
+    }
+
+    /* Reduce left padding */
+    .page {
+        padding-left: 10px;
+        padding-top: 60px;
+    }
+
+    /* Banner smaller */
+    .slide {
+        height: 180px;
+        border-radius: 10px;
+    }
+
+    /* Smaller anime cards */
+    .animes {
+        width: 150px;
+        height: auto;
+    }
+
+    .anime-img {
+        width: 150px;
+        height: 220px;
+    }
+
+    /* Smaller music cards */
+    .anime-music {
+        width: 150px;
+        height: auto;
+    }
+
+    .anime-music-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Text adjustments */
+    .anime-title {
+        font-size: 13px;
+    }
+
+    .anime-dil {
+        font-size: 12px;
+    }
+
+    .most-pop {
+        font-size: 20px;
+    }
+
+    /* Header adjustments */
+    .header {
+        gap: 10px;
+        height: 50px;
+    }
+
+    .logo {
+        width: 45px;
+    }
+
+}
