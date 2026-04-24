@@ -39,17 +39,57 @@ def home():
 
 @app.route("/music")
 def music():
-    return render_template("music.html")
+    cursor = db.cursor(dictionary=True)
+
+    cursor.execute("SELECT * FROM music")
+    music_result = cursor.fetchall()
+
+    return render_template(
+        "music.html",
+        music_list=music_result
+    )
 
 
 @app.route("/reading")
 def reading():
-    return render_template("reading.html")
+    cursor = db.cursor(dictionary=True)
+
+    cursor.execute("SELECT * FROM anime")
+    anime_result = cursor.fetchall()
+
+    cursor.execute("SELECT * FROM book")
+    book_result = cursor.fetchall()
+
+    cursor.execute("SELECT * FROM music")
+    music_result = cursor.fetchall()
+
+    return render_template(
+        "reading.html",
+        anime_list=anime_result,
+        book_list=book_result,
+        music_list=music_result
+    )
 
 
 @app.route("/search")
 def search():
-    return render_template("search.html")
+    cursor = db.cursor(dictionary=True)
+
+    cursor.execute("SELECT * FROM anime")
+    anime_result = cursor.fetchall()
+
+    cursor.execute("SELECT * FROM book")
+    book_result = cursor.fetchall()
+
+    cursor.execute("SELECT * FROM music")
+    music_result = cursor.fetchall()
+
+    return render_template(
+        "search.html",
+        anime_list=anime_result,
+        book_list=book_result,
+        music_list=music_result
+    )
 
 
 if __name__ == "__main__":
