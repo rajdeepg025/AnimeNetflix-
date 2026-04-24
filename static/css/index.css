@@ -15,6 +15,10 @@ body {
   color: var(--text-color);
 }
 
+html{
+    max-width: 1600px;
+}
+
 p {
   color: var(--text-color);
 }
@@ -99,6 +103,7 @@ p {
     display: flex;
     flex-direction: row;
     flex: 1;
+    margin-bottom: 10px;
     padding-top: 10px;
     justify-content: center;
 }

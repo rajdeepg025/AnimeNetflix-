@@ -54,20 +54,16 @@ def music():
 def reading():
     cursor = db.cursor(dictionary=True)
 
-    cursor.execute("SELECT * FROM anime")
-    anime_result = cursor.fetchall()
+    cursor.execute("SELECT * FROM book where category_id=8")
+    Manhwa_result = cursor.fetchall()
 
-    cursor.execute("SELECT * FROM book")
-    book_result = cursor.fetchall()
-
-    cursor.execute("SELECT * FROM music")
-    music_result = cursor.fetchall()
+    cursor.execute("SELECT * FROM book where category_id=7")
+    Manga_result = cursor.fetchall()
 
     return render_template(
         "reading.html",
-        anime_list=anime_result,
-        book_list=book_result,
-        music_list=music_result
+        Manhwa_list = Manhwa_result,
+        Manga_list = Manga_result
     )
 
 
@@ -75,8 +71,8 @@ def reading():
 def search():
     cursor = db.cursor(dictionary=True)
 
-    cursor.execute("SELECT * FROM anime")
-    anime_result = cursor.fetchall()
+    cursor.execute("SELECT * FROM anime where category_id=2")
+    category_result_2 = cursor.fetchall()
 
     cursor.execute("SELECT * FROM book")
     book_result = cursor.fetchall()
@@ -84,11 +80,19 @@ def search():
     cursor.execute("SELECT * FROM music")
     music_result = cursor.fetchall()
 
+    cursor.execute("SELECT * FROM anime where category_id=1")
+    category_result_1 = cursor.fetchall()
+
+    cursor.execute("SELECT * FROM anime where category_id=4")
+    category_result_4 = cursor.fetchall()
+
     return render_template(
         "search.html",
-        anime_list=anime_result,
         book_list=book_result,
-        music_list=music_result
+        music_list=music_result,
+        category_1_list = category_result_1,
+        category_4_list = category_result_4,
+        category_2_list = category_result_2
     )
 
 

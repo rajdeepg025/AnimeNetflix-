@@ -71,7 +71,7 @@ CREATE TABLE `book` (
 
 LOCK TABLES `book` WRITE;
 /*!40000 ALTER TABLE `book` DISABLE KEYS */;
-INSERT INTO `book` VALUES (1,'The Apocalypse is Here','The Apocalypse is Here.jpeg',9.2,1,'Ongoing'),(2,'Solo Leveling','Read Solo Leveling __ Episode 1 _ Tapas Comics.jpeg',9.5,2,'Ongoing'),(3,'The Shepherd Wizard','the shepherd wizard.webp',8.2,3,'Ongoing'),(4,'DanDaDan','dandadan.jpg',9.2,3,'Ongoing'),(5,'Attack On Titan','Shingeki_no_Kyojin_manga_volume_1.jpg',9.5,2,'Completed'),(6,'Musuko Tensei','musuko_Volume_1_JP.webp',9.2,2,'Ongoing'),(7,'The Tutorial Tower Of The Advanced Player','The Tutorial Tower Of The Advanced Player _(2020_Webtoon).jpeg',7.2,NULL,'Ongoing');
+INSERT INTO `book` VALUES (1,'The Apocalypse is Here','The Apocalypse is Here.jpeg',9.2,8,'Ongoing'),(2,'Solo Leveling','Read Solo Leveling __ Episode 1 _ Tapas Comics.jpeg',9.5,8,'Ongoing'),(3,'The Shepherd Wizard','the shepherd wizard.webp',8.2,8,'Ongoing'),(4,'DanDaDan','dandadan.jpg',9.2,7,'Ongoing'),(5,'Attack On Titan','Shingeki_no_Kyojin_manga_volume_1.jpg',9.5,7,'Completed'),(6,'Musuko Tensei','musuko_Volume_1_JP.webp',9.2,7,'Ongoing'),(7,'The Tutorial Tower Of The Advanced Player','The Tutorial Tower Of The Advanced Player _(2020_Webtoon).jpeg',7.2,8,'Ongoing');
 /*!40000 ALTER TABLE `book` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +86,7 @@ CREATE TABLE `categories` (
   `category_id` int NOT NULL AUTO_INCREMENT,
   `category_name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +95,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Latest'),(2,'Popular'),(3,'Trending'),(4,'Movies');
+INSERT INTO `categories` VALUES (1,'Latest'),(2,'Popular'),(3,'Trending'),(4,'Movies'),(7,'Manga'),(8,'Manhwa');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -136,4 +136,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-23 16:02:16
+-- Dump completed on 2026-04-24 22:15:41

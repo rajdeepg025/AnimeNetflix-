@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnimeNetflex-Reading</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-    <script src="index.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </head>
 <body class="light-mode">
         <div class="top-header">
       <div class="header">
         <div class="right-header">
-            <div ><img src="banners/ChatGPT Image Mar 29, 2026, 02_19_56 AM.png" class="logo"></div>
+            <div ><img src="{{ url_for('static', filename='images/banners-img/ChatGPT Image Mar 29, 2026, 02_19_56 AM.png')}}" class="logo"></div>
             <div><p class="name">AnimeNetflex</p></div>
         </div>
 
@@ -33,9 +33,9 @@
     </div>
 <div class="page">
         <div class="anime-sec1">
-        <div ><p class="most-pop">Manhwa and Manga</p></div>
+        <div ><p class="most-pop">Manga</p></div>
         <div class="most-pop-sec">
-            {% for book in book_list %}
+            {% for book in Manga_list %}
 
         <div class="animes">
 
@@ -65,9 +65,9 @@
     </div>
 
     <div class="anime-sec1">
-        <div ><p class="most-pop">Manhwa and Manga</p></div>
+        <div ><p class="most-pop">Manhwa</p></div>
         <div class="most-pop-sec">
-            {% for book in book_list %}
+            {% for book in Manhwa_list %}
 
         <div class="animes">
 
@@ -95,7 +95,7 @@
         {% endfor %}
         </div>
     </div>
-    
+
 </div>
 </body>
 </html>
