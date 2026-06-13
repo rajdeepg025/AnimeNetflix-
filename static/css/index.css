@@ -447,7 +447,7 @@ p{
 /* 📱 MOBILE RESPONSIVE FIX */
 @media (max-width: 768px) {
 
-    /* Move side nav to bottom */
+    /* Bottom Navigation */
     .top-side-nav {
         top: auto;
         bottom: 0;
@@ -455,73 +455,25 @@ p{
         height: 60px;
     }
 
-    .overlay{
-        width: 20%;
-    }
-
     .side-nav {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-
         padding-top: 0;
         gap: 0;
         height: 60px;
     }
 
-    /* Add space so bottom nav doesn't cover content */
     body {
         padding-bottom: 70px;
     }
 
-    /* Reduce left padding */
     .page {
         padding-left: 10px;
         padding-top: 60px;
     }
 
-    /* Banner smaller */
-    .slide {
-        height: 180px;
-        border-radius: 10px;
-    }
-
-    /* Smaller anime cards */
-    .animes {
-        width: 150px;
-        height: auto;
-    }
-
-    .anime-img {
-        width: 150px;
-        height: 220px;
-    }
-
-    /* Smaller music cards */
-    .anime-music {
-        width: 150px;
-        height: auto;
-    }
-
-    .anime-music-img {
-        width: 150px;
-        height: 150px;
-    }
-
-    /* Text adjustments */
-    .anime-title {
-        font-size: 13px;
-    }
-
-    .anime-dil {
-        font-size: 12px;
-    }
-
-    .most-pop {
-        font-size: 20px;
-    }
-
-    /* Header adjustments */
+    /* Header */
     .header {
         gap: 10px;
         height: 50px;
@@ -531,6 +483,75 @@ p{
         width: 45px;
     }
 
+    /* Banner */
+    .slide {
+        height: 180px;
+        border-radius: 10px;
+    }
+
+    /* Horizontal Scroll Sections */
+    .most-pop-sec {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: flex-start;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .most-pop-sec::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Anime Cards */
+    .animes {
+        width: 150px;
+        min-width: 150px;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .anime-img {
+        width: 150px;
+        height: 220px;
+    }
+
+    /* Music Cards */
+    .anime-music {
+        width: 150px;
+        min-width: 150px;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .card {
+        width: 150px;
+    }
+
+    .anime-music-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Text */
+    .anime-title {
+        font-size: 13px;
+        white-space: normal;
+    }
+
+    .anime-dil {
+        font-size: 12px;
+    }
+
+    .most-pop {
+        font-size: 20px;
+    }
 }
 .search-form{
     display:flex;
