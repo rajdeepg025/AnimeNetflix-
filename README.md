@@ -108,7 +108,7 @@ Import `animenetflix.sql` into MySQL.
 
 python app.py
 
-5. Open in browser
+5. Change db = mysql.connector.connect() to localhost and Open in browser
 
 http://127.0.0.1:5000
 
