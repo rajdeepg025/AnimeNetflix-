@@ -80,7 +80,7 @@ AnimeNetflex/
 
 ## Search Page
 
-![Search Page](screenshots/search-mob.png)
+![Search Page](screenshots/search-1-mob.png)
 
 ## Manga Section
 
@@ -94,7 +94,7 @@ AnimeNetflex/
 
 1. Clone the repository
 
-git clone https://github.com/rajdeepg025.github.io/AnimeNetflex.git
+git clone https://github.com/rajdeepg025/AnimeNetflix-.git
 
 2. Install dependencies
 
