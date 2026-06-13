@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnimeNetflex-Search</title>
     <link rel="stylesheet" href="{{ url_for ('static',filename='css/index.css')}}">
-    <script src="index.js"></script>
+    <script src="../static/js/index.js"></script>
 </head>
 <body class="light-mode">
         <div class="top-header">
@@ -15,19 +15,30 @@
             <div><p class="name">AnimeNetflex</p></div>
         </div>
 
-        <div class="center-header">
-            <div class="search-bar"><input type="text" placeholder="Search" class="search-bar1"></div>
-            <div ><p class="search-bar-icon">&#128269;</p></div>
-        </div>
+      <div class="center-header">
+    <form action="{{ url_for('search') }}" method="GET" class="search-form">
 
-        <div class="left-header">
+        <input
+            type="text"
+            name="q"
+            value="{{ query }}"
+            placeholder="Search Anime, Manga, Music..."
+            class="search-bar1">
+
+        <button class="search-bar-icon" type="submit">
+            &#128269;
+        </button>
+
+    </form>
+      </div>
+</div>
+</div>
+<div class="left-header">
             <div onclick="toggleMode()"><img src="{{ url_for('static', filename='images/banners-img/icons8-settings-50.png')}}" class="setting"></div>
         </div>
-        
-    </div>  
-    </div>
 
-    <div class="top-side-nav">
+
+<div class="top-side-nav">
         <div class="side-nav">
             <a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='images/banners-img/home.png') }}" class="home"></a>
             <a href="{{url_for('search')}}"><img src="{{ url_for('static', filename='images/banners-img/search_3053866.png ') }}" class="search"></a>
@@ -36,104 +47,127 @@
         </div>
     </div>
 
-    <div class="page">
+<div class="page">
+
+{% if query %}
+
+    <!-- Anime Results -->
+
+    {% if anime_results %}
     <div class="anime-sec1">
-        <div ><p class="most-pop">Popular</p></div>
-        
+
+
         <div class="most-pop-sec">
-            <div class="most-pop-sec">
 
-        {% for anime in category_2_list %}
+            {% for anime in anime_results %}
 
-        <div class="animes">
+            <div class="animes">
 
-        <img 
-            src="{{ url_for('static', filename='images/anime-img/' + anime.image) }}" 
-            class="anime-img"><div> 
-        <p class="anime-title">
-        {{ anime.title }}
-        </p>
+                <img
+                src="{{ url_for('static',
+                filename='images/anime-img/' + anime.image) }}"
+                class="anime-img">
+
+                <p class="anime-title">
+                    {{ anime.title }}
+                </p>
+
+                <p class="anime-dil">
+                    {{ anime.rating }} ⭐
+                </p>
+
+            </div>
+
+            {% endfor %}
+
         </div>
 
-        <div>
-            <p class="anime-dil">{{ anime.season }} {{anime.latest_episode}}</p>
-            <p class="anime-dil"> {{ anime.rating }} ⭐</p>
-        </div>
-
-        </div>
-
-        {% endfor %}
-
-        </div>
-        </div>
     </div>
+    {% endif %}
 
+    <!-- Manga Results -->
+
+    {% if book_results %}
     <div class="anime-sec1">
-        <div ><p class="most-pop">Latest</p></div>
-        
+
+
         <div class="most-pop-sec">
-            <div class="most-pop-sec">
 
-        {% for anime in category_1_list %}
+            {% for book in book_results %}
 
-        <div class="animes">
+            <div class="animes">
 
-        <img 
-            src="{{ url_for('static', filename='images/anime-img/' + anime.image) }}" 
-            class="anime-img"><div> 
-        <p class="anime-title">
-        {{ anime.title }}
-        </p>
+                <img
+                src="{{ url_for('static',
+                filename='images/manga-img/' + book.image) }}"
+                class="anime-img">
+
+                <p class="anime-title">
+                    {{ book.title }}
+                </p>
+
+                <p class="anime-dil">
+                    {{ book.rating }} ⭐
+                </p>
+
+            </div>
+
+            {% endfor %}
+
         </div>
 
-        <div>
-            <p class="anime-dil">{{ anime.season }} {{anime.latest_episode}}</p>
-            <p class="anime-dil"> {{ anime.rating }} ⭐</p>
-        </div>
-
-        </div>
-
-        {% endfor %}
-
-        </div>
-        </div>
     </div>
+    {% endif %}
 
+    <!-- Music Results -->
+
+    {% if music_results %}
     <div class="anime-sec1">
-        <div ><p class="most-pop">Movies</p></div>
-        
+
+
         <div class="most-pop-sec">
-            <div class="most-pop-sec">
 
-       {% for anime in category_4_list %}
+            {% for music in music_results %}
 
-        <div class="animes">
+            <div class="anime-music">
 
-        <img 
-            src="{{ url_for('static', filename='images/anime-img/' + anime.image) }}" 
-            class="anime-img"><div> 
-        <p class="anime-title">
-        {{ anime.title }}
-        </p>
+                <img
+                src="{{ url_for('static',
+                filename='images/music-img/' + music.image) }}"
+                class="anime-music-img">
+
+                <p class="anime-title">
+                    {{ music.title }}
+                </p>
+
+                <p class="anime-dil">
+                    {{ music.singer }}
+                </p>
+
+            </div>
+
+            {% endfor %}
+
         </div>
 
-        <div>
-            <p class="anime-dil">{{ anime.season }} {{anime.latest_episode}}</p>
-            <p class="anime-dil"> {{ anime.rating }} ⭐</p>
-        </div>
-
-        </div>
-
-        {% endfor %}
-
-        </div>
-        </div>
     </div>
+    {% endif %}
 
+{% else %}
+
+    <p class="search-empty">
+        Search Anime, Manga or Music ....
+    </p>
+
+{% endif %}
+
+
+
+
+</div>
     <script src="index.js"></script>
 
     </div>
-
     
 
 </body>
