@@ -169,7 +169,7 @@ CREATE TABLE `music` (
   `song` varchar(500) DEFAULT NULL,
   `category_id` int DEFAULT NULL,
   PRIMARY KEY (`music_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -178,7 +178,7 @@ CREATE TABLE `music` (
 
 LOCK TABLES `music` WRITE;
 /*!40000 ALTER TABLE `music` DISABLE KEYS */;
-INSERT INTO `music` VALUES (1,'Bling-Bang-Bang-Born','Creepy Nuts','CD _ Creepy Nuts LEGION Standard Edition.jpeg','bling-bang-bang-born.mp3',2),(2,'Otonoke','Creepy Nuts','Otonoke.jpeg','dandadan-otonoke.mp3',2),(3,'IRIS OUT','Kenshi Yonezu','iris.jpeg','iris out music.mp3',2),(4,'Number one-Bankai','Shiro SAGISU','Number-One-Bankaijpg.jpg','Number-One-Bankai.mp3',2),(5,'Nyanpasu Yabure Kabure','Kotori Koiwai','Nyanpasu.jpeg','Nyanpasu-Yabure-Kabure.mp3',2),(6,'Waku Waku(Anya Song)','Anya','wah-wah-anta.jpeg','SpyxFamily-Waku-Waku-Song.mp3',2),(7,'Just A Boy','DrINsaNE','just-a-boy.jpeg','DrINsaNE-JUST-A-BOY.mp3',2),(8,'Kamado Tanjirou no Uta','LisA','Kamado Tanjirou no Uta (From _Demon Slayer_ Kimetsu no Yaiba_).jpeg','Kamado-Tanjiro-no-Uta.mp3',2);
+INSERT INTO `music` VALUES (1,'Bling-Bang-Bang-Born','Creepy Nuts','CD _ Creepy Nuts LEGION Standard Edition.jpeg','bling-bang-bang-born.mp3',2),(2,'Otonoke','Creepy Nuts','Otonoke.jpeg','dandadan-otonoke.mp3',2),(3,'IRIS OUT','Kenshi Yonezu','iris.jpeg','iris out music.mp3',2),(4,'Number one-Bankai','Shiro SAGISU','Number-One-Bankaijpg.jpg','Number-One-Bankai.mp3',2),(5,'Nyanpasu Yabure Kabure','Kotori Koiwai','Nyanpasu.jpeg','Nyanpasu-Yabure-Kabure.mp3',2),(6,'Waku Waku(Anya Song)','Anya','wah-wah-anta.jpeg','SpyxFamily-Waku-Waku-Song.mp3',2),(7,'Just A Boy','DrINsaNE','just-a-boy.jpeg','DrINsaNE-JUST-A-BOY.mp3',2),(8,'Kamado Tanjirou no Uta','LisA','Kamado Tanjirou no Uta (From _Demon Slayer_ Kimetsu no Yaiba_).jpeg','Kamado-Tanjiro-no-Uta.mp3',2),(9,'Shinzou Wo Sasageyo','Linked Horizon','sagayo.jpeg','Shingeki no Kyojin (Shinzou Wo Sasageyo opening) HD - Daniel Campoverde.mp3',1),(10,'Song of Dead','KANA-BOON','song of dead.jpg','OPENING #2   Song of the Dead by KANA-BOON  Zom 100 Bucket List of the Dead  VIZ - vizmedia.mp3',1),(11,'Black Catcher','Vickeblanka','black clover opening 10.jpeg','Black Clover Opening 10  Black Catcher - Crunchyroll.mp3',1),(12,'BEAUTIFUL','TREASURE','beautiful.jpeg','TREASURE - BEAUTIFUL (Anime M_V) - TREASURE.mp3',1),(13,'Kawaikute Gomen (I am Sorry for Being Cute)','Capi','Kawaikute Gomen (I am Sorry for Being Cute).jpg','HoneyWorks - HoneyWorks OFFICIAL.mp3',3),(14,'Kaikai Kitan','Eve','jjk.jpeg','Kaikai Kitan.mp3',3);
 /*!40000 ALTER TABLE `music` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -191,4 +191,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-14  2:05:19
+-- Dump completed on 2026-06-14 12:44:12
