@@ -69,26 +69,9 @@ AnimeNetflex/
 
 ![Music Section](screenshots/music.png)
 
-## Mobile interface 
-## Home Page
+## Mobile responsive Home Dark and Light mode
 
-![Home Page](screenshots/home-mob.png)
-
-## Home Page - light mode
-
-![Home Page](screenshots/home-mob-light.png)
-
-## Search Page
-
-![Search Page](screenshots/search-1-mob.png)
-
-## Manga Section
-
-![Manga Section](screenshots/manga-mob.png)
-
-## Music Section
-
-![Music Section](screenshots/music-mob.png)
+![Home Page](screenshots/home-mob-dark and light.jpeg)
 
 ## Installation
 

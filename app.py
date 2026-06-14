@@ -42,9 +42,17 @@ def music():
     cursor.execute("SELECT * FROM music")
     music_result = cursor.fetchall()
 
+    cursor.execute("SELECT * FROM music WHERE category_id IN (1, 3);")
+    music_result_1 = cursor.fetchall()
+
+    cursor.execute("SELECT * FROM music WHERE category_id IN (2, 3);")
+    music_result_3 = cursor.fetchall()
+
     return render_template(
         "music.html",
-        music_list=music_result
+        music_list=music_result,
+        music_list_1=music_result_1,
+        music_list_3=music_result_3
     )
 
 
