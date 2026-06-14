@@ -5,11 +5,10 @@ import os
 app = Flask(__name__)
 
 db = mysql.connector.connect(
-    host="roundhouse.proxy.rlwy.net",
+    host="localhost",
     user="root",
-    password="wLnxuZvWEwSWEnfASOYTyqNGlROolOCP",
-    database="railway",
-    port=34681
+    password="12345",
+    database="animenetflix"
 )
 cursor = db.cursor(dictionary=True)
 
