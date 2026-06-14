@@ -71,7 +71,7 @@ AnimeNetflex/
 
 ## Mobile responsive Home Dark and Light mode
 
-![Home Page](screenshots/home-mob-dark and light.jpeg)
+![Home Page](screenshots/home-mob-dark_and_light.jpeg)
 
 ## Installation
 
