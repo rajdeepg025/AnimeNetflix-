@@ -107,4 +107,4 @@ http://127.0.0.1:5000
 
 Created by Rajdeep
 
-This project was built for learning web development using Flask, MySQL, HTML, CSS, and JavaScript.
+This project was built for learning web development using Flask, MySQL, HTML, CSS, and JavaScript. While building AnimeNetflex website it taught me connetions with mysql database and making a static web to dynamic web in the process. I have realized many new thing. As a beginner and studying in class 12 AnimeNetflex turned my imagination to reality. I have also used chatGPT for help and learning by myself. WARNING: this website is for made only for learning porpose.
